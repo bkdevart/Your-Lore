@@ -1,3 +1,13 @@
-from django.shortcuts import render
+from lore.models import Lore
+from lore.serializers import LoreSerializer
+from rest_framework import generics
 
-# Create your views here.
+
+class LoreList(generics.ListCreateAPIView):
+    queryset = Lore.objects.all()
+    serializer_class = LoreSerializer
+
+
+class LoreDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Lore.objects.all()
+    serializer_class = LoreSerializer
