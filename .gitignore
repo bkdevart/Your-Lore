@@ -1,6 +1,7 @@
 # files
 *.DS_Store
 *.sqlite3
+secrets.py
 
 # folders
 __pycache__
