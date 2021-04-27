@@ -1,7 +1,8 @@
 # files
 *.DS_Store
 *.sqlite3
-secrets.py
+key.py
+Data Roadmap.pages
 
 # folders
 __pycache__
