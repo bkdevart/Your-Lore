@@ -7,10 +7,10 @@ class UserSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = User
-        fields = ['id', 'username', 'lore']
+        fields = ['id', 'username', 'groups', 'lore']
 
 class LoreSerializer(serializers.ModelSerializer):
     class Meta:
         model = Lore
         owner = serializers.ReadOnlyField(source='owner.username')
-        fields = ['id', 'title', 'story', 'owner']
+        fields = ['id', 'groups', 'title', 'story', 'owner']
